@@ -1,0 +1,19 @@
+{
+  "name": "@olibm/jwks-verify",
+  "version": "0.1.0",
+  "description": "Verify JWT using keys from a keyserver",
+  "repository": "https://github.com/olibm/jwks-verify",
+  "author": "olibm",
+  "license": "MIT",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "test": "npm audit"
+  },
+  "dependencies": {
+    "jsonwebtoken": "^8.5.1",
+    "jwks-rsa": "^1.9.0"
+  }
+}
