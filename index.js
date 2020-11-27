@@ -46,5 +46,12 @@ async function jwksVerify(issuer, audience, jwksUri, token, jwksClientOptions, j
     });
 }
 
+async function verifyGoogleJwt(projectId, token) {
+    const issuer = `https://securetoken.google.com/${projectId}`;
+    const keyServer = 'https://www.googleapis.com/service_accounts/v1/jwk/securetoken@system.gserviceaccount.com';
+    return await jwksVerify(issuer, projectId, keyServer, token);
+}
+
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.jwksVerify = jwksVerify;
+exports.verifyGoogleJwt = verifyGoogleJwt;
