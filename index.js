@@ -54,7 +54,7 @@ async function verifyGoogleJwt(projectId, token) {
 
 function isValidAud(aud) {
     if (Array.isArray(aud)) {
-        return !!(aud.length && !aud.some(aud=> aud && (typeof aud === 'string' || aud instanceof RegExp)));
+        return !!(aud.length && !aud.some(aud=> !(aud && (typeof aud === 'string' || aud instanceof RegExp))));
     }
     else {
         return !!(aud && (typeof aud === 'string' || aud instanceof RegExp));
