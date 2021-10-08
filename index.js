@@ -7,7 +7,7 @@ const jwksClients = {};
 
 async function jwksVerify(issuer, audience, jwksUri, token, jwksClientOptions, jwtVerifyOptions) {
     if (!issuer || typeof issuer !== 'string') throw new Error('issuer required');
-    if (!audience || typeof audience !== 'string') throw new Error('audience required');
+    if (!isValidAud(audience)) throw new Error('audience required');
     if (!jwksUri || typeof jwksUri !== 'string') throw new Error('jwksUri required');
     if (!token || typeof token !== 'string') throw new Error('token required');
 
@@ -50,6 +50,15 @@ async function verifyGoogleJwt(projectId, token) {
     const issuer = `https://securetoken.google.com/${projectId}`;
     const keyServer = 'https://www.googleapis.com/service_accounts/v1/jwk/securetoken@system.gserviceaccount.com';
     return await jwksVerify(issuer, projectId, keyServer, token);
+}
+
+function isValidAud(aud) {
+    if (Array.isArray(aud)) {
+        return !!(aud.length && !aud.some(aud=> aud && (typeof aud === 'string' || aud instanceof RegExp)));
+    }
+    else {
+        return !!(aud && (typeof aud === 'string' || aud instanceof RegExp));
+    }
 }
 
 Object.defineProperty(exports, "__esModule", { value: true });

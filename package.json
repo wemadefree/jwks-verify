@@ -1,6 +1,6 @@
 {
   "name": "@olibm/jwks-verify",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Verify JWT using keys from a keyserver",
   "repository": "https://github.com/olibm/jwks-verify",
   "author": "olibm",
