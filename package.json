@@ -1,11 +1,11 @@
 {
-  "name": "@olibm/jwks-verify",
+  "name": "@we-made/jwks-verify",
   "version": "2.0.0",
   "description": "Verify JWT using keys from a keyserver",
   "repository": {
-    "url": "git+https://github.com/olibm/jwks-verify.git"
+    "url": "git+https://github.com/wemadefree/jwks-verify.git"
   },
-  "author": "olibm",
+  "author": "We Made AS",
   "license": "MIT",
   "main": "index.js",
   "files": [

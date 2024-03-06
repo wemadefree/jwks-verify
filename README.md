@@ -1,9 +1,9 @@
-# @olibm/jwks-verify
+# @we-made/jwks-verify
 
 ## Example
 
 ```
-import { jwksVerify } from '@olibm/jwks-verify'
+import { jwksVerify } from '@we-made/jwks-verify'
 
 async function example() {
     const audience = 'my-project-id';
