@@ -31,7 +31,7 @@ async function jwksVerify(issuer, audience, jwksUri, token, jwksClientOptions, j
         throw new Error('header.kid required');
     }
 
-    let key = await jwksClient.getSigningKeyAsync(header.kid);
+    let key = await jwksClient.getSigningKey(header.kid);
     let publicKey = key.getPublicKey();
 
     if (!publicKey || typeof publicKey !== 'string') {
