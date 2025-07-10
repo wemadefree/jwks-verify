@@ -1,6 +1,6 @@
 {
   "name": "@we-made/jwks-verify",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Verify JWT using keys from a keyserver",
   "repository": {
     "url": "git+https://github.com/wemadefree/jwks-verify.git"
